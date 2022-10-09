@@ -20,5 +20,5 @@ input {
 }
 
 .displayBox {
-  @apply w-[200px] h-[200px] grid place-items-center;
+  @apply w-[250px] h-[250px] flex flex-col gap-2 items-center justify-center;
 }
