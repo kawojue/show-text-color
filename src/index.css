@@ -4,11 +4,11 @@
 
 
 body {
-  @apply w-screen h-screen grid place-items-center;
+  @apply w-screen h-screen flex justify-center;
 }
 
 #root {
-  @apply flex flex-col gap-3;
+  @apply flex flex-col gap-3 mt-10;
 }
 
 .displayBox,
