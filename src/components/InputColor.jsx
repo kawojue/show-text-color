@@ -1,7 +1,7 @@
-import colorNames from "colornames";
+import colorNames from "colornames"
 const InputColor = ({ inputColor, onSetInputColor, onSetColor, onSetHexValue, onSetToggle, toggle }) => {
     const handleOnChange = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         onSetInputColor(e.target.value)
         onSetColor(e.target.value)
         onSetHexValue(colorNames(e.target.value))
