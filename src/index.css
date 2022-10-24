@@ -4,6 +4,7 @@
 
 
 body {
+  user-select: none;
   @apply w-screen h-screen flex justify-center;
 }
 
@@ -24,5 +25,5 @@ input {
 }
 
 .displayBox {
-  @apply w-[275px] h-[275px] flex flex-col gap-2 items-center justify-center text-center;
+  @apply w-[275px] h-[275px] flex flex-col gap-2 items-center justify-center text-center p-2;
 }
