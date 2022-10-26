@@ -21,7 +21,7 @@ function App() {
   }
 
   useEffect(() => {
-    setInfo("Seperate the colors with coma.")
+    setInfo("Add color names seperated with commas.")
     setTimeout(() => {
       setInfo("")
     }, 4000);
@@ -29,13 +29,18 @@ function App() {
 
   return (
     <>
-      {!displayType ? <p>{info}</p> : <p></p>}
+      <p className={`show ${!displayType ? 'active' : ''}`}>
+        {info}
+      </p>
       <div className="flex justify-between my-2">
         <ToggleDisplay toggleDisplay={toggleDisplay} displayType={displayType} />
         <ToggleHexValue toggleHexValue={toggleHexValue} />
       </div>
-      <DisplayBox inputColor={inputColor} color={color} hexValue={hexValue} toggle={toggle} displayType={displayType} />
-      <InputColor inputColor={inputColor} onSetInputColor={setInputColor} onSetColor={setColor} onSetHexValue={setHexValue} onSetToggle={setToggle} toggle={toggle} />
+      <DisplayBox inputColor={inputColor} color={color} hexValue={hexValue}
+        toggle={toggle} displayType={displayType} />
+      <InputColor inputColor={inputColor} onSetInputColor={setInputColor}
+        onSetColor={setColor} onSetHexValue={setHexValue}
+        onSetToggle={setToggle} toggle={toggle} displayType={displayType} />
     </>
   )
 }
