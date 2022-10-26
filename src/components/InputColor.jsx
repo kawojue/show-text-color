@@ -1,6 +1,6 @@
 import colorNames from "colornames"
 const InputColor = ({ inputColor, onSetInputColor, onSetColor,
-    onSetHexValue, onSetToggle, toggle }) => {
+    onSetHexValue, onSetToggle, toggle, displayType }) => {
     const handleOnChange = (e) => {
         e.preventDefault()
         onSetInputColor(e.target.value)
@@ -11,8 +11,10 @@ const InputColor = ({ inputColor, onSetInputColor, onSetColor,
 
     return (
         <form onSubmit={(e) => e.preventDefault()}>
-            <input type="text" autoFocus placeholder='Add Color Name' className='px-0.5 py-1 w-full'
-                value={inputColor} onChange={handleOnChange} />
+            <input type="text" autoFocus className='px-0.5 py-1 w-full'
+                value={inputColor} onChange={handleOnChange}
+                placeholder={`Add Color ${displayType ? 'Name' : 'Names'}`}
+            />
         </form>
     )
 }
