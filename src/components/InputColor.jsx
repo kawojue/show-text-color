@@ -1,18 +1,25 @@
-import colorNames from "colornames"
-const InputColor = ({ inputColor, onSetInputColor, onSetColor,
-    onSetHexValue, onSetToggle, toggle, displayType }) => {
+import { useContext } from 'react'
+import colorNames from 'colornames'
+import Context from '../context/Context'
+
+
+const InputColor = () => {
+    const { inputColor, setInputColor,
+        setColor, setHexValue, setToggle,
+        toggle, displayType } = useContext(Context)
+
     const handleOnChange = (e) => {
         e.preventDefault()
-        onSetInputColor(e.target.value)
-        onSetColor(e.target.value)
-        onSetHexValue(colorNames(e.target.value))
-        e.target.value === "" ? onSetToggle(false) : onSetToggle(toggle)
+        setInputColor(e.target.value)
+        setColor(e.target.value)
+        setHexValue(colorNames(e.target.value))
+        e.target.value === "" ? setToggle(false) : setToggle(toggle)
     }
 
     return (
         <form onSubmit={(e) => e.preventDefault()}>
             <input type="text" autoFocus className='px-0.5 py-1 w-full'
-                value={inputColor} onChange={handleOnChange}
+                value={inputColor} onChange={(e) => handleOnChange(e)}
                 placeholder={`Add Color ${displayType ? 'Name' : 'Names'}`}
             />
         </form>
