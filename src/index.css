@@ -5,11 +5,11 @@
 
 body {
   user-select: none;
-  @apply w-screen h-screen flex justify-center;
+  @apply flex justify-center;
 }
 
 #root {
-  @apply flex flex-col gap-3 mt-10;
+  @apply mt-10;
 }
 
 .btn {
@@ -25,14 +25,5 @@ input {
 }
 
 .displayBox {
-  @apply w-full min-w-[275px] h-[275px] flex flex-col gap-2 items-center justify-center text-center p-2 flex-wrap;
-}
-
-.show {
-  @apply transition-all duration-300 ease-linear;
-  transform: translateY(-400%);
-}
-
-.show.active {
-  transform: translate(0);
+  @apply w-[275px] h-[275px] flex flex-col gap-2 items-center justify-center text-center p-2 flex-wrap;
 }
