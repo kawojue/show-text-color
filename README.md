@@ -1,5 +1,5 @@
 # Color-Text
-$ git clone https://github.com/alwaysappear/Mini-Notes-App.git
+$ git clone https://github.com/alwaysappear/Color-Text.git
 
 $ cd Mini-Notes-App
 
