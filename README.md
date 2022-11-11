@@ -1,7 +1,7 @@
 # Color-Text
 $ git clone https://github.com/alwaysappear/Color-Text.git
 
-$ cd Mini-Notes-App
+$ cd Color-Text
 
 $ npm install
 
