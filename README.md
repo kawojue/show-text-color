@@ -1,7 +1,8 @@
-# Color-Text
-$ git clone https://github.com/alwaysappear/Color-Text.git
+# show-text-color
 
-$ cd Color-Text
+$ git clone https://github.com/alwaysappear/show-text-color.git
+
+$ cd show-text-color
 
 $ npm install
 
