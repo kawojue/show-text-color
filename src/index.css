@@ -27,3 +27,7 @@ input {
 .displayBox {
   @apply w-[275px] h-[275px] flex flex-col gap-2 items-center justify-center text-center p-2 flex-wrap;
 }
+
+.hex-container {
+  @apply flex gap-3 justify-center;
+}
