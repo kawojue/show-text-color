@@ -11,13 +11,9 @@ export const DataContext = ({ children }) => {
     const [inputColor, setInputColor] = useState("")
     const [displayType, setDisplayType] = useState(true)
 
-    const toggleHexValue = () => {
-        setToggle(!toggle)
-    }
+    const toggleHexValue = () => setToggle(!toggle)
 
-    const toggleDisplay = () => {
-        setDisplayType(!displayType)
-    }
+    const toggleDisplay = () => setDisplayType(!displayType)
 
     const onCopy = async value => {
         try {
