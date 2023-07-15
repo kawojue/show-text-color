@@ -9,12 +9,12 @@ const DisplayBox = () => {
     const formatColor = color.trim().split(',').join(',')
 
     return (
-        <div className="displayBox" style={{
+        <div className="displayBox max-w-md" style={{
             background:
                 `${displayType ? color :
                     `linear-gradient(${formatColor})`}`
         }}>
-            <h1 className="text-xl">
+            <h1 className="text-xl max-w-[300px]">
                 {inputColor === '' ? 'Empty Value' : inputColor}
             </h1>
             {toggle &&
