@@ -4,9 +4,11 @@ import Context from '../context/Context'
 
 
 const InputColor = () => {
-    const { inputColor, setInputColor,
-        setColor, setHexValue, setToggle,
-        toggle, displayType } = useContext(Context)
+    const {
+            inputColor, setInputColor,
+            setColor, setHexValue,
+            setToggle, toggle,
+        } = useContext(Context)
 
     const handleOnChange = (e) => {
         e.preventDefault()
@@ -20,7 +22,7 @@ const InputColor = () => {
         <form onSubmit={(e) => e.preventDefault()}>
             <input type="text" autoFocus className='px-0.5 py-1 w-full'
                 value={inputColor} onChange={(e) => handleOnChange(e)}
-                placeholder={`Add Color ${displayType ? 'Name' : 'Names'}`}
+                placeholder={`Add Color Name(s)`}
             />
         </form>
     )
